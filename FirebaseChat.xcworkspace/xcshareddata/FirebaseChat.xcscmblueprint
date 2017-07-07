@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1AE416DB9CD5880C372C40DB95AB0760CDA8A852" : 9223372036854775807,
+    "1D8D76F5649BE0E9DAC8CB36142C8844FB83F48C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "48BB957C-8736-4D3B-AC43-EECFAA1C50B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1AE416DB9CD5880C372C40DB95AB0760CDA8A852" : "",
+    "1D8D76F5649BE0E9DAC8CB36142C8844FB83F48C" : "FirebaseChat\/FirebaseChat\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FirebaseChat",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FirebaseChat.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SiamakEshghi\/SwiftLoginProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1AE416DB9CD5880C372C40DB95AB0760CDA8A852"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SiamakEshghi\/FirebaseChat.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1D8D76F5649BE0E9DAC8CB36142C8844FB83F48C"
+    }
+  ]
+}
