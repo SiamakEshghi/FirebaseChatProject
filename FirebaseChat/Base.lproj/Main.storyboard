@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="urp-Te-8DJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qxk-ha-R0K">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -154,6 +154,120 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAf-qf-gZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4330.3999999999996" y="-40.029985007496258"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="Iya-gw-vNh">
+            <objects>
+                <tableViewController id="Qxk-ha-R0K" customClass="MessagesTableViewController" customModule="FirebaseChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Adr-Vr-6Qf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96607393029999999" green="0.89635032420000005" blue="0.97460168599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="16K-Py-cvu">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="20"/>
+                                <color key="textColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title=" Title" prompt="" id="ZC3-Nq-kcf">
+                                    <barButtonItem key="leftBarButtonItem" title="Logout" id="ubr-d7-Kkw">
+                                        <connections>
+                                            <action selector="logoutBtnTapped:" destination="Qxk-ha-R0K" id="hJJ-VF-Mr8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" systemItem="compose" id="hxm-D1-kxn">
+                                        <connections>
+                                            <action selector="writeMessage:" destination="Qxk-ha-R0K" id="gvS-Ga-FB7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell1" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="100" id="JbT-2g-7qx" customClass="MessageCell" customModule="FirebaseChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="102" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JbT-2g-7qx" id="i5P-ob-3YU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3mh-t1-vJS">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="99.666666666666671"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="99.670000000000002" id="9Ed-0I-OU3"/>
+                                                <constraint firstAttribute="width" constant="140" id="SzV-y9-0dk"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qx-MT-iCH">
+                                            <rect key="frame" x="148" y="0.0" width="127" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="127" id="mWn-Nl-gqi"/>
+                                                <constraint firstAttribute="height" constant="24" id="psl-Op-w5B"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="21"/>
+                                            <color key="textColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvU-PX-L9X">
+                                            <rect key="frame" x="148" y="82" width="127" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="127" id="W7E-Et-ERJ"/>
+                                                <constraint firstAttribute="height" constant="18" id="tAd-wg-ijj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="17"/>
+                                            <color key="textColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-8U-jcj">
+                                            <rect key="frame" x="295" y="0.0" width="109" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="Agw-jc-2sC"/>
+                                                <constraint firstAttribute="width" constant="109" id="o51-2f-wQJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                            <color key="textColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="rvU-PX-L9X" secondAttribute="bottom" id="1ta-Hl-hYv"/>
+                                        <constraint firstAttribute="bottom" secondItem="3mh-t1-vJS" secondAttribute="bottom" id="IrD-px-hHL"/>
+                                        <constraint firstItem="7Qx-MT-iCH" firstAttribute="leading" secondItem="3mh-t1-vJS" secondAttribute="trailing" constant="8" id="Ji4-Jp-tVI"/>
+                                        <constraint firstItem="cJ3-8U-jcj" firstAttribute="leading" secondItem="7Qx-MT-iCH" secondAttribute="trailing" constant="20" id="ME1-i9-UEP"/>
+                                        <constraint firstItem="3mh-t1-vJS" firstAttribute="leading" secondItem="i5P-ob-3YU" secondAttribute="leading" id="Xbj-K4-x1t"/>
+                                        <constraint firstItem="7Qx-MT-iCH" firstAttribute="top" secondItem="i5P-ob-3YU" secondAttribute="top" id="ifM-am-zbW"/>
+                                        <constraint firstItem="cJ3-8U-jcj" firstAttribute="top" secondItem="i5P-ob-3YU" secondAttribute="top" id="mfx-gs-8nY"/>
+                                        <constraint firstItem="3mh-t1-vJS" firstAttribute="top" secondItem="i5P-ob-3YU" secondAttribute="top" id="vAo-ml-mB8"/>
+                                        <constraint firstItem="rvU-PX-L9X" firstAttribute="leading" secondItem="3mh-t1-vJS" secondAttribute="trailing" constant="8" id="xue-bu-aTF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.96607393029999999" green="0.89635032420000005" blue="0.97460168599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="rvU-PX-L9X" id="yHA-NH-Qhx"/>
+                                    <outlet property="messageImage" destination="3mh-t1-vJS" id="671-jz-naV"/>
+                                    <outlet property="nameLabel" destination="7Qx-MT-iCH" id="Lpz-kL-dLz"/>
+                                    <outlet property="timeLabel" destination="cJ3-8U-jcj" id="pER-49-hd8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qxk-ha-R0K" id="Ca1-UD-kj9"/>
+                            <outlet property="delegate" destination="Qxk-ha-R0K" id="p6L-Sf-8rF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="qjb-Bm-hY4"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="16K-Py-cvu" id="AbQ-uW-Rf7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8g-HV-nu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5101.449275362319" y="-40.760869565217398"/>
         </scene>
     </scenes>
 </document>
