@@ -32,8 +32,8 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
                     print(error!)
                     return
                 }else{
-                    self.showAlert(text: "Sign in successfully")
-                    //self.dismiss(animated: true, completion: nil)
+                    //self.showAlert(text: "Sign in successfully")
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }else{
@@ -88,7 +88,7 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
                 return
             }
            self.showAlert(text: "Saved user successfully into Firebase")
-           // self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -126,7 +126,7 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
     
     
     func showAlert(text:String)  {
-        let alert = UIAlertController(title: "My Title", message: text, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Attention", message: text, preferredStyle: UIAlertControllerStyle.alert)
         
         // add an action (button)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
