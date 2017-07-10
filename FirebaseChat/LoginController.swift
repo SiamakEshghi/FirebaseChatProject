@@ -28,6 +28,7 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         handleImageView()
         txtFieldName.isHidden = true
+        imageViewProfile.isHidden = true
 
         }
 
@@ -46,9 +47,11 @@ class LoginController: UIViewController {
         if isSignIn{
             signInBtn.setTitle("SignIn", for: .normal)
             txtFieldName.isHidden = true
+            imageViewProfile.isHidden = true
         }else{
             signInBtn.setTitle("Register", for: .normal)
             txtFieldName.isHidden = false
+            imageViewProfile.isHidden = false
         }
     }
     
