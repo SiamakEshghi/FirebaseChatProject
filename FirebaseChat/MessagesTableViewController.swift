@@ -82,7 +82,9 @@ class MessagesTableViewController: UITableViewController {
     func handleNewMessage() {
         
 
-        showAlert(text: "opened wite message page successfully")
+        let newMessageController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewMessage") as! NewMessageTableViewController
+        newMessageController.messagesController = self
+        present(newMessageController, animated: true, completion: nil)
     }
     
     func checkeduserislogedIn() {

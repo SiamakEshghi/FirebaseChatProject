@@ -24,6 +24,7 @@
 		C70B9DE21F12BE3F007041B7 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70B9DE11F12BE3F007041B7 /* MessageCell.swift */; };
 		C72131651F26BCC70039AD62 /* ChatLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72131641F26BCC70039AD62 /* ChatLogViewController.swift */; };
 		C72131671F26C0620039AD62 /* messagesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72131661F26C0620039AD62 /* messagesCollectionCell.swift */; };
+		C796D2881F27F95C00B930E2 /* NewMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C796D2871F27F95C00B930E2 /* NewMessageTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C70B9DE11F12BE3F007041B7 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		C72131641F26BCC70039AD62 /* ChatLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogViewController.swift; sourceTree = "<group>"; };
 		C72131661F26C0620039AD62 /* messagesCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messagesCollectionCell.swift; sourceTree = "<group>"; };
+		C796D2871F27F95C00B930E2 /* NewMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageTableViewController.swift; sourceTree = "<group>"; };
 		E61E8D52A479CCD17570FC23 /* Pods-FirebaseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				4F94C9401F07046E0088310F /* Logincontroller+.swift */,
 				C70B9DDD1F12BA55007041B7 /* MessagesTableViewController.swift */,
 				C72131641F26BCC70039AD62 /* ChatLogViewController.swift */,
+				C796D2871F27F95C00B930E2 /* NewMessageTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				4FFB04E11F09556A002DE54C /* Message.swift in Sources */,
 				4F448E2B1F00610C00752B77 /* LoginController.swift in Sources */,
 				4F94C9411F07046E0088310F /* Logincontroller+.swift in Sources */,
+				C796D2881F27F95C00B930E2 /* NewMessageTableViewController.swift in Sources */,
 				C72131651F26BCC70039AD62 /* ChatLogViewController.swift in Sources */,
 				4FA55B271F01F7D100DFFF33 /* User.swift in Sources */,
 				C70B9DE21F12BE3F007041B7 /* MessageCell.swift in Sources */,
