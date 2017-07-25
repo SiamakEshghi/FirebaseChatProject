@@ -38,7 +38,10 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
         }else{
             //Register the user with Firebase
             Auth.auth().createUser(withEmail: email, password: pass){(user,error) in
-                if error != nil { print(error!)}else{
+                if error != nil { print(error!)
+                self.showAlert(text: (error?.localizedDescription)!)
+                    return
+                }else{
                     
                     guard let uid = user?.uid else{
                         return

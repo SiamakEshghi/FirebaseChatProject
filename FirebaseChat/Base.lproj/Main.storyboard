@@ -21,6 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="P76-Ia-p5W">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8AD-90-3g3">
                                 <rect key="frame" x="67" y="70" width="280" height="557"/>
                                 <subviews>
@@ -137,7 +140,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96607393026351929" green="0.89635032415390015" blue="0.97460168600082397" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P76-Ia-p5W" secondAttribute="trailing" id="OUT-id-92p"/>
                             <constraint firstItem="8AD-90-3g3" firstAttribute="top" secondItem="JxN-8a-GRk" secondAttribute="bottom" constant="50" id="Y4v-5Z-osI"/>
+                            <constraint firstItem="apU-Ln-1hf" firstAttribute="top" secondItem="P76-Ia-p5W" secondAttribute="bottom" id="Z2W-m6-yue"/>
+                            <constraint firstItem="P76-Ia-p5W" firstAttribute="leading" secondItem="2K5-bx-gdl" secondAttribute="leading" id="pxW-ws-3zx"/>
+                            <constraint firstItem="P76-Ia-p5W" firstAttribute="top" secondItem="JxN-8a-GRk" secondAttribute="bottom" id="rNq-Vr-Kcd"/>
                             <constraint firstItem="8AD-90-3g3" firstAttribute="centerX" secondItem="2K5-bx-gdl" secondAttribute="centerX" id="yBo-05-zUn"/>
                             <constraint firstItem="apU-Ln-1hf" firstAttribute="top" secondItem="8AD-90-3g3" secondAttribute="bottom" constant="109" id="yU1-bz-lxg"/>
                         </constraints>
@@ -388,4 +395,7 @@
             <point key="canvasLocation" x="5881.1594202898559" y="-41.576086956521742"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2" width="300" height="168"/>
+    </resources>
 </document>
