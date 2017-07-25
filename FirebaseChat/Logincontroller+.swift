@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseStorage
 
 extension LoginController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
-   
+    
     
     
     //Mark: -Registering
@@ -28,11 +28,9 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
             //Sign in the user with Firebase
             Auth.auth().signIn(withEmail: email, password: pass){ (user,error) in
                 if error != nil{
-                    self.showAlert(text: "User name or Password is not correct")
                     print(error!)
                     return
                 }else{
-                    //self.showAlert(text: "Sign in successfully")
                     self.dismiss(animated: true, completion: nil)
                 }
             }
@@ -46,24 +44,24 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
                     }
                     
                     //successffully register
-                 let imageName = NSUUID().uuidString
+                    let imageName = NSUUID().uuidString
                     let storageRef = Storage.storage().reference().child("Profile_Images").child("\(imageName).jpg")
                     
                     if let profileImage = self.imageViewProfile.image,let uploadedData = UIImageJPEGRepresentation(profileImage, 0.1){
-                       
+                        
                         //if let uploadedData = UIImagePNGRepresentation(self.imageViewProfile.image!)
                         
                         storageRef.putData(uploadedData, metadata: nil, completion: { (metadata, error) in
                             if error != nil{
                                 print(error!)
                                 return
-                                 }
-                    
-                        if let profileImageUrl = metadata?.downloadURL()?.absoluteString{
-                        let values = ["name":name,"email":email,"ProfileImageUrl":profileImageUrl]
-                        
-                        self.registerUserIntoFirebaseDatabase(uid: uid, values: values as [String : AnyObject])
-                        
+                            }
+                            
+                            if let profileImageUrl = metadata?.downloadURL()?.absoluteString{
+                                let values = ["name":name,"email":email,"ProfileImageUrl":profileImageUrl]
+                                
+                                self.registerUserIntoFirebaseDatabase(uid: uid, values: values as [String : AnyObject])
+                                
                             }
                             
                         })
@@ -81,20 +79,20 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
         var ref : DatabaseReference!
         ref = Database.database().reference()
         let usersRef = ref.child("Users").child(uid)
-       
+        
         usersRef.updateChildValues(values){(err,ref) in
             if err != nil {
                 print(err!)
                 return
             }
-           self.showAlert(text: "Saved user successfully into Firebase")
+            print("Saved user successfully into Firebase")
             self.dismiss(animated: true, completion: nil)
         }
     }
     
     //Mark: - Selecting fill by piker
     func handleSelectProfileImage()  {
-         let picker = UIImagePickerController()
+        let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
         
@@ -104,7 +102,7 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         var selectedImageFromPiker: UIImage?
-       
+        
         if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage{
             selectedImageFromPiker = editedImage
         }else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
@@ -114,24 +112,13 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
             
             imageViewProfile.image = selectedImage
         }
-          dismiss(animated: true, completion: nil)
-      
-       }
+        dismiss(animated: true, completion: nil)
         
+    }
+    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("Cancel picker")
         dismiss(animated: true, completion: nil)
-    }
-    
-    
-    func showAlert(text:String)  {
-        let alert = UIAlertController(title: "Attention", message: text, preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
     }
 }
