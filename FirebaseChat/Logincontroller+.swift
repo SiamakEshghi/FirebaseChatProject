@@ -28,6 +28,7 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
             //Sign in the user with Firebase
             Auth.auth().signIn(withEmail: email, password: pass){ (user,error) in
                 if error != nil{
+                    self.showAlert(text: (error?.localizedDescription)!)
                     print(error!)
                     return
                 }else{
@@ -120,5 +121,15 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("Cancel picker")
         dismiss(animated: true, completion: nil)
+    }
+    
+    func showAlert(text:String)  {
+        let alert = UIAlertController(title: "Attention", message: text, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
 }
