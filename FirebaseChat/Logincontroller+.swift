@@ -89,6 +89,7 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
                 print(err!)
                 return
             }
+            //self.showAlert(text: "Register is successfully")
             print("Saved user successfully into Firebase")
             self.dismiss(animated: true, completion: nil)
         }
