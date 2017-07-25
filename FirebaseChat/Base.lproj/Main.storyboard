@@ -269,5 +269,123 @@
             </objects>
             <point key="canvasLocation" x="5101.449275362319" y="-40.760869565217398"/>
         </scene>
+        <!--Chat Log View Controller-->
+        <scene sceneID="xr3-wY-3yF">
+            <objects>
+                <viewController storyboardIdentifier="ChatLog" id="aMK-3N-Vzn" customClass="ChatLogViewController" customModule="FirebaseChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fXw-Ol-20P"/>
+                        <viewControllerLayoutGuide type="bottom" id="l0P-Vv-7ja"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OT5-Zx-QIm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPz-Tf-hhg">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="tintColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="27"/>
+                                    <color key="textColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="zGL-qw-8PD">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="yDv-tr-eHW">
+                                            <connections>
+                                                <action selector="cancellBtnTapped:" destination="aMK-3N-Vzn" id="NQH-Pv-lhl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new Message ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQE-fs-6cG">
+                                <rect key="frame" x="0.0" y="706" width="378" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TSp-zY-jxK"/>
+                                </constraints>
+                                <color key="textColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctN-Ag-3dd">
+                                <rect key="frame" x="378" y="706" width="36" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7zx-0D-eaG"/>
+                                    <constraint firstAttribute="width" constant="36" id="EKJ-dE-o1Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="18"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendBtnTapped:" destination="aMK-3N-Vzn" eventType="touchUpInside" id="tx6-xG-wGu"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="szK-zq-2Bu">
+                                <rect key="frame" x="0.0" y="64" width="414" height="642"/>
+                                <color key="backgroundColor" red="0.96607393029999999" green="0.89635032420000005" blue="0.97460168599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m2n-7U-xU3">
+                                    <size key="itemSize" width="103" height="111"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="D12-Pr-ooG" customClass="messagesCollectionCell" customModule="FirebaseChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="103" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="103" height="111"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTM-RR-mVW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="111"/>
+                                                    <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="26"/>
+                                                    <color key="textColor" red="0.9190120101" green="0.27248406409999998" blue="0.62569272519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.96607393029999999" green="0.89635032420000005" blue="0.97460168599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="lTM-RR-mVW" firstAttribute="leading" secondItem="D12-Pr-ooG" secondAttribute="leading" id="CcB-7i-cOr"/>
+                                            <constraint firstAttribute="trailing" secondItem="lTM-RR-mVW" secondAttribute="trailing" id="S5S-gH-X4C"/>
+                                            <constraint firstAttribute="bottom" secondItem="lTM-RR-mVW" secondAttribute="bottom" id="WTj-5i-FqG"/>
+                                            <constraint firstItem="lTM-RR-mVW" firstAttribute="top" secondItem="D12-Pr-ooG" secondAttribute="top" id="eWE-3h-Nuk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="labelMessages" destination="lTM-RR-mVW" id="smy-eX-ovA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96607393029999999" green="0.89635032420000005" blue="0.97460168599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="l0P-Vv-7ja" firstAttribute="top" secondItem="ctN-Ag-3dd" secondAttribute="bottom" id="1x0-Ij-jN1"/>
+                            <constraint firstAttribute="trailing" secondItem="szK-zq-2Bu" secondAttribute="trailing" id="8d2-U4-5Ce"/>
+                            <constraint firstItem="ctN-Ag-3dd" firstAttribute="leading" secondItem="BQE-fs-6cG" secondAttribute="trailing" id="J7k-29-WZl"/>
+                            <constraint firstItem="szK-zq-2Bu" firstAttribute="leading" secondItem="OT5-Zx-QIm" secondAttribute="leading" id="MhY-Tp-h87"/>
+                            <constraint firstItem="BQE-fs-6cG" firstAttribute="leading" secondItem="OT5-Zx-QIm" secondAttribute="leading" id="QEL-Zp-fTz"/>
+                            <constraint firstAttribute="trailing" secondItem="CPz-Tf-hhg" secondAttribute="trailing" id="Sna-ij-qpd"/>
+                            <constraint firstItem="CPz-Tf-hhg" firstAttribute="leading" secondItem="OT5-Zx-QIm" secondAttribute="leading" id="UqI-jo-f03"/>
+                            <constraint firstItem="szK-zq-2Bu" firstAttribute="top" secondItem="CPz-Tf-hhg" secondAttribute="bottom" id="c8L-g5-7DL"/>
+                            <constraint firstItem="CPz-Tf-hhg" firstAttribute="top" secondItem="OT5-Zx-QIm" secondAttribute="top" constant="20" id="cLb-Nw-9Pa"/>
+                            <constraint firstItem="ctN-Ag-3dd" firstAttribute="top" secondItem="szK-zq-2Bu" secondAttribute="bottom" id="jNP-bQ-1cF"/>
+                            <constraint firstAttribute="trailing" secondItem="ctN-Ag-3dd" secondAttribute="trailing" id="jkT-xl-Cir"/>
+                            <constraint firstItem="l0P-Vv-7ja" firstAttribute="top" secondItem="BQE-fs-6cG" secondAttribute="bottom" id="qvF-qI-UEO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="szK-zq-2Bu" id="fIR-WA-SQ8"/>
+                        <outlet property="navigationBar" destination="CPz-Tf-hhg" id="k1C-eG-mEI"/>
+                        <outlet property="sendBtn" destination="ctN-Ag-3dd" id="AeW-Dp-W5b"/>
+                        <outlet property="textFieldChatMessage" destination="BQE-fs-6cG" id="iue-Fx-YfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWv-6k-WE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5881.1594202898559" y="-41.576086956521742"/>
+        </scene>
     </scenes>
 </document>

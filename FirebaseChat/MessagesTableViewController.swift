@@ -114,6 +114,13 @@ class MessagesTableViewController: UITableViewController {
     }
     
   
+    func showChatControllerForUser(user:User){
+        
+        let chatLogcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChatLog") as! ChatLogViewController
+        present(chatLogcontroller, animated: true, completion: nil)
+        chatLogcontroller.user = user
+    }
+    
     
     @IBAction func logoutBtnTapped(_ sender: UIBarButtonItem) {
         handleLogout()
@@ -167,7 +174,7 @@ class MessagesTableViewController: UITableViewController {
             let user = User()
             user.id = chatPartnerId
             user.setValuesForKeys(dictionary)
-           // self.showChatControllerForUser(user: user)
+            self.showChatControllerForUser(user: user)
             
         }, withCancel: nil)
         

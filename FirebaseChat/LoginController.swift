@@ -29,7 +29,7 @@ class LoginController: UIViewController {
         handleImageView()
         txtFieldName.isHidden = true
         imageViewProfile.isHidden = true
-
+        
         }
 
     
