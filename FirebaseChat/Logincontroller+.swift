@@ -21,7 +21,7 @@ extension LoginController: UIImagePickerControllerDelegate,UINavigationControlle
         guard let email = txtFieldEmail.text
             ,let pass = txtFieldPass.text,
             let name = txtFieldName.text else{
-                print("Fiil all fields")
+                print("Fill all fields")
                 return
         }
         if isSignIn {
