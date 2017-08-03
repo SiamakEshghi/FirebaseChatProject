@@ -31,6 +31,7 @@ class MessagesTableViewController: UITableViewController {
         tableView.reloadData()
         perform(#selector(checkeduserislogedIn), with: nil, afterDelay: 0)
         observeUserMessages()
+        self.hideKeyboardWhenTappedAround()
     }
     
     func observeUserMessages()  {
