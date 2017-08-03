@@ -69,6 +69,7 @@ class ChatLogViewController: UIViewController,UICollectionViewDelegate,UICollect
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        self.hideKeyboardWhenTappedAround()
     }
     
     

@@ -185,7 +185,7 @@
 				TargetAttributes = {
 					4F35D5181F00158B00DE649F = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = M3K3GULW57;
+						DevelopmentTeam = 4KBRQGT6BP;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -411,7 +411,7 @@
 			baseConfigurationReference = E61E8D52A479CCD17570FC23 /* Pods-FirebaseChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M3K3GULW57;
+				DEVELOPMENT_TEAM = 4KBRQGT6BP;
 				INFOPLIST_FILE = FirebaseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASJ.FirebaseChat;
@@ -425,7 +425,7 @@
 			baseConfigurationReference = 32240B35AB442732D9801A4B /* Pods-FirebaseChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M3K3GULW57;
+				DEVELOPMENT_TEAM = 4KBRQGT6BP;
 				INFOPLIST_FILE = FirebaseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ASJ.FirebaseChat;

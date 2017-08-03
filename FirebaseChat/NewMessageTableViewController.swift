@@ -19,6 +19,7 @@ class NewMessageTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         perform(#selector(fetchUser), with: nil, afterDelay: 0)
+        self.hideKeyboardWhenTappedAround()
         
     }
     
